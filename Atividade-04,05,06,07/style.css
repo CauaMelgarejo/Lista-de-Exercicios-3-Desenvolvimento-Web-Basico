@@ -1,0 +1,146 @@
+/* Fonte padrão moderna */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: #f9fbfd;
+  color: #333;
+}
+
+/* 4. Cores e box model */
+header, main, footer {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #B8D4F0;
+  border-radius: 10px;
+  background-color: #e8f1fa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Cabeçalho com menu */
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* 5. Seletores */
+h2 {
+  font-size: 2rem;
+  text-decoration: underline;
+  color: #26547C;
+}
+
+.destaque {
+  font-style: italic;
+  background-color: #dbefff;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+#importante {
+  border-top: 5px solid #ff595e;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+/* 6. Galeria */
+.galeria-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.galeria div {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.galeria img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+/* Responsividade da galeria */
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 7. Menu hamburger */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #26547C;
+  font-weight: 600;
+}
+
+/* Menu responsivo */
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #d0e8ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .menu.ativo {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu a {
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 6px;
+  }
+}

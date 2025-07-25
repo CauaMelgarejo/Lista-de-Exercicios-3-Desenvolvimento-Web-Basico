@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Página Bonita</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Meu Site Estiloso</h1>
+    <button class="hamburger">&#9776;</button>
+    <nav class="menu">
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Seja bem-vindo!</h2>
+    <p>Este é um parágrafo normal.</p>
+    <p class="destaque">Este texto está em destaque.</p>
+    <p id="importante">Este parágrafo é importante.</p>
+
+    <section class="galeria-container">
+      <div class="galeria">
+        <!-- 8 imagens com legendas -->
+        <div><img src="https://via.placeholder.com/150" alt=""><p>Imagem 1</p></div>
+        <div><img src="https://via.placeholder.com/150" alt=""><p>Imagem 2</p></div>
+        <div><img src="https://via.placeholder.com/150" alt=""><p>Imagem 3</p></div>
+        <div><img src="https://via.placeholder.com/150" alt=""><p>Imagem 4</p></div>
+        <div><img src="https://via.placeholder.com/150" alt=""><p>Imagem 5</p></div>
+        <div><img src="https://via.placeholder.com/150" alt=""><p>Imagem 6</p></div>
+        <div><img src="https://via.placeholder.com/150" alt=""><p>Imagem 7</p></div>
+        <div><img src="https://via.placeholder.com/150" alt=""><p>Imagem 8</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('ativo');
+    });
+  </script>
+</body>
+</html>
