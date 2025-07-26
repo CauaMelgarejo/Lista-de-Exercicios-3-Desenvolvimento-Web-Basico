@@ -1,51 +1,60 @@
-/* Fonte padrão moderna */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background-color: #f9fbfd;
+  background-color: #fdfcfc;
   color: #333;
 }
 
-/* 4. Cores e box model */
+:root {
+  --vermelho-inter: #BA0C2F;
+  --vermelho-claro: #e84855;
+  --cinza-claro: #f4f4f4;
+  --branco: #ffffff;
+}
+
 header, main, footer {
   margin: 20px;
   padding: 20px;
-  border: 2px solid #B8D4F0;
+  border: 2px solid var(--vermelho-inter);
   border-radius: 10px;
-  background-color: #e8f1fa;
+  background-color: var(--cinza-claro);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Cabeçalho com menu */
 header {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: var(--vermelho-inter);
+  color: var(--branco);
 }
 
-/* 5. Seletores */
+header h1 {
+  margin: 0;
+}
+
 h2 {
   font-size: 2rem;
   text-decoration: underline;
-  color: #26547C;
+  color: var(--vermelho-inter);
 }
 
 .destaque {
   font-style: italic;
-  background-color: #dbefff;
+  background-color: #fff3f3;
   padding: 8px;
+  border-left: 4px solid var(--vermelho-inter);
   border-radius: 5px;
 }
 
 #importante {
-  border-top: 5px solid #ff595e;
+  border-top: 5px solid var(--vermelho-inter);
   padding-top: 10px;
   margin-top: 10px;
 }
 
-/* 6. Galeria */
 .galeria-container {
   display: flex;
   justify-content: center;
@@ -61,12 +70,16 @@ h2 {
 }
 
 .galeria div {
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: var(--branco);
+  border: 2px solid var(--vermelho-inter);
   border-radius: 8px;
   padding: 10px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.galeria div:hover {
+  transform: scale(1.05);
 }
 
 .galeria img {
@@ -75,7 +88,6 @@ h2 {
   margin-bottom: 8px;
 }
 
-/* Responsividade da galeria */
 @media (max-width: 768px) {
   .galeria {
     grid-template-columns: repeat(2, 1fr);
@@ -88,12 +100,12 @@ h2 {
   }
 }
 
-/* 7. Menu hamburger */
 .hamburger {
   display: none;
   background: none;
   border: none;
   font-size: 2rem;
+  color: var(--branco);
   position: absolute;
   right: 20px;
   top: 20px;
@@ -110,16 +122,15 @@ h2 {
 
 .menu a {
   text-decoration: none;
-  color: #26547C;
+  color: var(--branco);
   font-weight: 600;
 }
 
-/* Menu responsivo */
 @media (max-width: 600px) {
   .menu {
     display: none;
     flex-direction: column;
-    background-color: #d0e8ff;
+    background-color: var(--vermelho-claro);
     padding: 15px;
     border-radius: 10px;
     margin-top: 10px;
@@ -140,7 +151,16 @@ h2 {
 
   .menu a {
     padding: 10px;
-    background-color: #ffffff;
+    background-color: var(--branco);
+    color: var(--vermelho-inter);
     border-radius: 6px;
+    text-align: center;
   }
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: var(--vermelho-inter);
+  color: var(--branco);
 }
